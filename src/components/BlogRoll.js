@@ -13,7 +13,7 @@ class BlogRoll extends React.Component {
         {posts &&
           posts.map(({ node: post }) => (
           <div className="column" key={post.id}>
-            <Link to={post.fields.slug} className="latest-item">
+            <Link to={post.fields.slug} data-aos="fade-up" className="latest-item">
               {post.frontmatter.featuredimage ? (
                 <div className="featured-thumbnail">
                   <PreviewCompatibleImage
@@ -27,6 +27,7 @@ class BlogRoll extends React.Component {
                 </div>
               ) : null}
               <h3>{post.frontmatter.title}</h3>
+              <p>This is a blurb</p>
             </Link>
           </div>
         ))}
@@ -63,7 +64,7 @@ export default () => (
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 120, quality: 100) {
-                      src
+                      ...GatsbyImageSharpFluid
                     }
                   }
                 }

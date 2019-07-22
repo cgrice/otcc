@@ -11,6 +11,10 @@ import robotRight from '../img/robotRight.png'
 import ctaHoverBig from '../img/ctaHoverBig.png'
 import ctaHoverMobile from '../img/ctaHoverMobile.png'
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+AOS.init()
+
 export const IndexPageTemplate = ({
   main,
   thisweek,
@@ -37,14 +41,27 @@ export const IndexPageTemplate = ({
     <section className="secondary">
       <div className="container">
         <h2>Latest from Code Club</h2>
-        <BlogRoll />
+        <BlogRoll/>
         <p><Link to="/blog" >More from the blog...</Link></p>
       </div>
     </section>
     <section className="cta">
       <div className="container">
-        <img className="robot robot-left" src={robotLeft} />
-        <img className="robot robot-right" src={robotRight} />
+        <img 
+          className="robot robot-left" 
+          data-aos-anchor=".cta" 
+          data-aos="slide-up" 
+          data-aos-duration="750"
+          src={robotLeft} 
+        />
+        <img 
+          className="robot robot-right" 
+          data-aos-anchor=".cta" 
+          data-aos-delay="200" 
+          data-aos="slide-down" 
+          data-aos-duration="750"
+          src={robotRight} 
+        />
         
         <Link to="/get-involved" className="button">
           <img className="ctaHover" src={ctaHoverBig} />
@@ -57,32 +74,20 @@ export const IndexPageTemplate = ({
 )
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
   thisweek: PropTypes.object,
   main: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
+  console.log(frontmatter)
+
   return (
     <Layout>
       <IndexPageTemplate
         main={frontmatter.main}
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
         thisweek={frontmatter.thisweek}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
       />
     </Layout>
   )
