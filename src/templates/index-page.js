@@ -13,65 +13,74 @@ import ctaHoverMobile from '../img/ctaHoverMobile.png'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-AOS.init()
 
-export const IndexPageTemplate = ({
-  main,
-  thisweek,
-}) => (
-  <div>
-    <section className="main">
-      <div className="container">
-        <div className="columns">
-          <div className="column">
-            <div className="content">
-              <h2>{main.heading}</h2>
-              <ReactMarkdown source={main.description} />
+
+class IndexPageTemplate extends React.Component {
+
+  componentDidMount() {
+    AOS.init()
+  }
+  
+  render() {
+    const { main, thisweek} = this.props
+
+    return (
+      <div>
+        <section className="main">
+          <div className="container">
+            <div className="columns">
+              <div className="column">
+                <div className="content">
+                  <h2>{main.heading}</h2>
+                  <ReactMarkdown source={main.description} />
+                </div>
+              </div>
+              <div className="column">
+                <div className="content aside">
+                  <h2>{thisweek.title}</h2>
+                  <ReactMarkdown source={thisweek.description} />
+                </div>
+              </div>
             </div>
           </div>
-          <div className="column">
-            <div className="content aside">
-              <h2>{thisweek.title}</h2>
-              <ReactMarkdown source={thisweek.description} />
-            </div>
+        </section>
+        <section className="secondary">
+          <div className="container">
+            <h2>Latest from Code Club</h2>
+            <BlogRoll/>
+            <p><Link to="/blog" >More from the blog...</Link></p>
           </div>
-        </div>
+        </section>
+        <section className="cta">
+          <div className="container">
+            <img 
+              className="robot robot-left" 
+              data-aos-anchor=".cta" 
+              data-aos="slide-up" 
+              data-aos-duration="750"
+              src={robotLeft} 
+            />
+            <img 
+              className="robot robot-right" 
+              data-aos-anchor=".cta" 
+              data-aos-delay="500" 
+              data-aos="slide-down" 
+              data-aos-duration="750"
+              src={robotRight} 
+            />
+            
+            <Link to="/get-involved" className="button">
+              <img className="ctaHover" src={ctaHoverBig} />
+              <img className="ctaHoverMobile" src={ctaHoverMobile} />
+              Get Involved!
+            </Link>
+          </div>
+        </section>
       </div>
-    </section>
-    <section className="secondary">
-      <div className="container">
-        <h2>Latest from Code Club</h2>
-        <BlogRoll/>
-        <p><Link to="/blog" >More from the blog...</Link></p>
-      </div>
-    </section>
-    <section className="cta">
-      <div className="container">
-        <img 
-          className="robot robot-left" 
-          data-aos-anchor=".cta" 
-          data-aos="slide-up" 
-          data-aos-duration="750"
-          src={robotLeft} 
-        />
-        <img 
-          className="robot robot-right" 
-          data-aos-anchor=".cta" 
-          data-aos-delay="500" 
-          data-aos="slide-down" 
-          data-aos-duration="750"
-          src={robotRight} 
-        />
-        
-        <Link to="/get-involved" className="button">
-          <img className="ctaHover" src={ctaHoverBig} />
-          <img className="ctaHoverMobile" src={ctaHoverMobile} />
-          Get Involved!
-        </Link>
-      </div>
-    </section>
-  </div>
-)
+    )
+  } 
+  
+}
 
 IndexPageTemplate.propTypes = {
   thisweek: PropTypes.object,
