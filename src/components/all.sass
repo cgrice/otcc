@@ -10,11 +10,11 @@ $border-radius: 20px
 
 @media screen and (min-width: 1408px) 
   .container
-    max-width: 920px
+    max-width: 980px
 
 @media screen and (min-width: 1216px)
   .container
-    max-width: 920px
+    max-width: 980px
 
 
 body
@@ -25,8 +25,10 @@ body
 a
   border-bottom: 1px dashed inherit
 
-h1, h2, h3, h4, .nav-item
-  font-weight: 600
+h1, h2, h3, h4, .nav-item, .cta .button
+  font-weight: 700
+  font-family: Quicksand
+
 
 section, header, footer
   padding: 1.3333em
@@ -57,8 +59,27 @@ header
 
 footer 
   background-color: $background-main
+  border-top: 2px solid darken($background-main, 3%)
   padding: 1em 0
-  height: 300px
+  color: $text-color-alt
+  padding-bottom: 5em
+
+  h2
+    font-size: 1.6em
+    margin-bottom: 0.8em
+
+  h3 
+    border-bottom: 1px solid $text-color-alt
+    padding-bottom: 0.333em
+    margin-bottom: 0.333em
+    
+  a
+    color: $text-color-alt
+
+  a:hover
+    color: $text-color-alt
+    text-decoration: underline
+
 
 nav
   background-color: $background-main
@@ -83,7 +104,7 @@ nav
 
 section
   z-index: 1
-  border-top: 2px solid #ccc
+  border-top: 2px solid #666
 
 section.secondary 
   background-color: $background-secondary
@@ -108,17 +129,20 @@ section.secondary
   padding: 1em
   border: 1px solid #DDD
 
+  h1, h2, h3, h4
+    color: #02394A
+
   h1
     padding-bottom: 0.3em
     border-bottom: 1px solid #ddd
 
 .content.aside
-  background-color: $background-main
-  border: 1px solid darken($background-main, 3%)
-  color: $text-color-alt
+  background-color: $background-content
+  border: 2px solid darken($background-main, 3%)
+  // color: $text-color-alt
 
-  h1, h2, h3, h4
-    color: $text-color-alt
+  // h1, h2, h3, h4
+  //   color: $text-color-alt
 
 section.secondary .latest-item
   display: block

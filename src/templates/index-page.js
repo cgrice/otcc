@@ -57,7 +57,7 @@ export const IndexPageTemplate = ({
         <img 
           className="robot robot-right" 
           data-aos-anchor=".cta" 
-          data-aos-delay="200" 
+          data-aos-delay="500" 
           data-aos="slide-down" 
           data-aos-duration="750"
           src={robotRight} 
