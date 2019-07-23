@@ -1,5 +1,5 @@
 import React from 'react'
-import logoLarge from '../img/logoLarge.svg'
+import logoLarge from '../img/logoLarge.png'
 
 const Header = () => {
   return (

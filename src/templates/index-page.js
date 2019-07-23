@@ -20,7 +20,7 @@ class IndexPageTemplate extends React.Component {
   componentDidMount() {
     AOS.init()
   }
-  
+
   render() {
     const { main, thisweek} = this.props
 
@@ -89,8 +89,6 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
-  console.log(frontmatter)
 
   return (
     <Layout>
