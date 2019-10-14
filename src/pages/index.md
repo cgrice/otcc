@@ -1,26 +1,29 @@
 ---
 templateKey: index-page
-thisweek:
-  title: This Week
-  description: >
-    Code club is _ON_ this week!
-
-    Next code club: _29th March_
-
-    ### Links:
-
-    * Moonhack
-    
-    * Microbit Project
-
 main:
-  heading: What is Code Club?
   description: >
-    Code Club is a nationwide project to get 9 to 11 year olds learning the basics of computer programming. You can find out more on the website www.codeclub.org.uk 
+    Code Club is a nationwide project to get 9 to 11 year olds learning the
+    basics of computer programming. You can find out more on the website
+    www.codeclub.org.uk 
 
 
-    We’ll be using software called Scratch which you can download at home for free at http://scratch.mit.edu/ Scratch makes it really easy to create fun, creative games whilst learning the basics of programming. Pupils will be using school equipment. CodeClub is FREE! 
+    We’ll be using software called Scratch which you can download at home for
+    free at http://scratch.mit.edu/ Scratch makes it really easy to create fun,
+    creative games whilst learning the basics of programming. Pupils will be
+    using school equipment. CodeClub is FREE! 
 
 
-    Code Club normally runs on Mondays after school from 3.15 - 4.15pm.  We have a limit of 20 pupils. If you are interested in getting involved please contact the school.
+    Code Club normally runs on Mondays after school from 3.15 - 4.15pm.  We have
+    a limit of 20 pupils. If you are interested in getting involved please
+    contact the school.
+  heading: What is Code Club?
+thisweek:
+  description: |
+    Code club is _ON_ this week!
+    Next code club: _14th October_
+    ### Links:
+    * [Shaun the Sheep competition](https://codeclub.org/en/shaun-competition)
+    * [Farmageddon Scratch File](https://rpf.io/shauns-space-mission-on)
+  title: This Week
 ---
+
