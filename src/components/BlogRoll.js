@@ -27,7 +27,7 @@ class BlogRoll extends React.Component {
                 </div>
               ) : null}
               <h3>{post.frontmatter.title}</h3>
-              <p>This is a blurb</p>
+              <p>{post.frontmatter.description}</p>
             </Link>
           </div>
         ))}
@@ -61,9 +61,10 @@ export default () => (
               }
               frontmatter {
                 title
+                description
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 475, maxHeight: 275, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }

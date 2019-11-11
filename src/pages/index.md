@@ -20,10 +20,10 @@ main:
 thisweek:
   description: |
     Code club is _ON_ this week!
-    Next code club: _14th October_
+    Next code club: _11th November_
     ### Links:
-    * [Shaun the Sheep competition](https://codeclub.org/en/shaun-competition)
-    * [Farmageddon Scratch File](https://rpf.io/shauns-space-mission-on)
+    * [Boat Race](https://codeclubprojects.org/en-GB/scratch/boat-race/)
+    * [ChatBot](https://codeclubprojects.org/en-GB/scratch/chatbot/)
   title: This Week
 ---
 
