@@ -18,12 +18,9 @@ main:
     contact the school.
   heading: What is Code Club?
 thisweek:
-  description: |
-    Code club is _ON_ this week!
-    Next code club: _11th November_
-    ### Links:
-    * [Boat Race](https://codeclubprojects.org/en-GB/scratch/boat-race/)
-    * [ChatBot](https://codeclubprojects.org/en-GB/scratch/chatbot/)
+  description: |+
+    Code club is _postponed_ until further notice.
+
   title: This Week
 ---
 
